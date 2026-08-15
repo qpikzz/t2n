@@ -1,5 +1,3 @@
-# Command: wti [alp] [text]
-
 from transform import *
 
 # inf loop
