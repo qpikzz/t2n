@@ -1,0 +1,36 @@
+###################################################################################################
+  _________   _   __
+ /_  __/__ \ / | / /
+  / /  __/ //  |/ / 
+ / /  / __// /|  /  
+/_/  /____/_/ |_/   
+
+###################################################################################################
+
+Here are all the commands with a brief explanation and an example:
+
+TTN
+- ttn [alphabet] [text] - converts a text to a number. There is no limit to text
+- - example: ttn default Hello World
+
+NTT
+- ntt [alphabet] [number] - converts a number to a text. Number MUST be an integer type (not float)
+- - example: ntt default 123456
+
+HELP
+- help - you are here.
+
+EXIT
+- exit | quit - kill the program
+
+###################################################################################################
+
+The alphabets can be any, but they must be specified in the first line. The rest are ignored. Experiment!
+
+###################################################################################################
+
+Author:
+- github.com/qpikzz
+- t.me/qpikzz
+
+###################################################################################################
