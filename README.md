@@ -29,8 +29,8 @@ git clone https://github.com/qpikzz/t2n.git
 python -m venv venv
 ```
 Then activate it:  
-windows: `venv\Scripts\activate`  
-mac/linux: `source venv/bin/activate`  
+- windows: `venv\Scripts\activate`  
+- mac/linux: `source venv/bin/activate`  
 4. Run the program:
 ```bash
 python run.py
@@ -48,12 +48,12 @@ The alphabet should be written on a single line; line breaks will not be read.
 
 - `run.py` - runs the program and handles commands. Also, if a command isn't recognized, the code is passed to exec, and the result is printed to the console.
 
-- `transform.py` - holds the 2 main functions. If you want to add t2n to your project, copy this file specifically.
+- `t2n.py` - holds the 2 main functions. If you want to add t2n to your project, copy this file specifically.
 
-## Using transform.py
+## Using t2n.py
 Here I'll go into more detail about the functions - what data they take and return.
 
-### textToNumber(text: str, alp: str) -> int  
+### text_to_number(text: str, alp: str) -> int  
 > Takes as input:
 > 1. text (string) - the message you want to encode
 > 2. alp (string) - the alphabet used for encoding  
@@ -77,4 +77,19 @@ Here I'll go into more detail about the functions - what data they take and retu
 > Usage example
 > ```py
 > numberToText(1234567890, "0123qwertyuiop") # >> iypeiwuu
+> ```
+
+### class T2N
+
+> Allows you to set the alphabet once at creation instead of passing it to every function call.  
+>Provides 2 methods: `t2n` (equivalent to `text_to_number`) and `n2t` (equivalent to `number_to_text`).
+
+> Usage example
+> ```py
+> from t2n import T2N
+> 
+> converter = T2N("helo wrd")
+> 
+> print(converter.t2n("hello"))   # >> 659
+> print(converter.n2t(22423))     # >> world
 > ```

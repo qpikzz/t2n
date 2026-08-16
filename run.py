@@ -1,4 +1,4 @@
-from transform import *
+from t2n import *
 
 # inf loop
 def main(working):
@@ -21,9 +21,9 @@ def main(working):
             alpName = clearCommand[1].lower()
 
             try:
-                with open(f"alphabets/{alpName}.txt") as f:
+                with open(f"alphabets/{alpName}.txt", encoding="utf-8") as f:
                     alp = f.readline()
-                result = textToNumber(" ".join(clearCommand[2:]), alp)
+                result = text_to_number(" ".join(clearCommand[2:]), alp)
                 print(result)
 
             except FileNotFoundError:
@@ -41,9 +41,9 @@ def main(working):
             alpName = clearCommand[1].lower()
 
             try:
-                with open(f"alphabets/{alpName}.txt") as f:
+                with open(f"alphabets/{alpName}.txt", encoding="utf-8") as f:
                     alp = f.readline()
-                result = numberToText(int(clearCommand[2]), alp)
+                result = number_to_text(int(clearCommand[2]), alp)
                 print(result)
 
             except FileNotFoundError:
@@ -54,7 +54,10 @@ def main(working):
                 print("You are write not a number")
 
         else:
-            print(eval(command))
+            try:
+                print(eval(command))
+            except Exception as e:
+                print(e)
 
 if __name__ == "__main__":
     print("Welcome to T2N\nWrite \"help\" to show a list of commands")
