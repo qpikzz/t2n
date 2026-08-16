@@ -1,4 +1,4 @@
-# t2n | v1.0
+# t2n | v2.0
 \- This program lets you encode and decode any text into numbers (text2numbers), with flexible customization of the translation through alphabets.
 
 ## Usage examples:
