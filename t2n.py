@@ -15,6 +15,18 @@ def number_to_text(number: int, alp: str) -> str:
         number //= len(alp)
     return result
 
+def average_to_number(texts: list, alp: str) -> str:
+    numbers = [text_to_number(text, alp) for text in texts]
+    average = round(sum(numbers) / len(numbers)) # !!!
+
+    return average
+
+def average_to_text(texts: list, alp: str) -> str:
+    numbers = [text_to_number(text, alp) for text in texts]
+    average = round(sum(numbers) / len(numbers)) # !!!
+
+    return number_to_text(average, alp)
+
 
 class T2N:
 
