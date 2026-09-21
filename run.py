@@ -53,6 +53,24 @@ def main(working):
             except ValueError:
                 print("You are write not a number")
 
+        elif clearCommand[0].lower() == "atn":
+            if len(clearCommand) <= 1:
+                print("Insufficient data. Use the help command.")
+                continue
+
+            alpName = clearCommand[1].lower()
+
+            try:
+                with open(f"alphabets/{alpName}.txt", encoding="utf-8") as f:
+                    alp = f.readline()
+                result = average_to_number(" ".join(clearCommand[2:]).split(";"), alp)
+                print(result)
+            
+            except FileNotFoundError:
+                print(
+                    f"the list of alphabets does not include \"{alpName}\"\ncheck the correctness of the command or the contents of the directory with alphabets.")
+            
+
         else:
             try:
                 print(eval(command))
