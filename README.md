@@ -10,6 +10,14 @@
 > 
 > this is t2n
 
+> atn default Hello;World!
+> 
+> *227142835184*
+
+> att tiny this;t2n
+> 
+> f4t7
+
 ## Important
 This algorithm is not a 100% way to protect your data. If someone has a single pair of source+result data, there is a way to decode other data as well. It's better to use the algorithm in combination with something else.
 
@@ -48,7 +56,7 @@ The alphabet should be written on a single line; line breaks will not be read.
 
 - `run.py` - runs the program and handles commands. Also, if a command isn't recognized, the code is passed to exec, and the result is printed to the console.
 
-- `t2n.py` - holds the 2 main functions. If you want to add t2n to your project, copy this file specifically.
+- `t2n.py` - holds the 4 main functions. If you want to add t2n to your project, copy this file specifically.
 
 ## Using t2n.py
 Here I'll go into more detail about the functions - what data they take and return.
@@ -77,6 +85,32 @@ Here I'll go into more detail about the functions - what data they take and retu
 > Usage example
 > ```py
 > numberToText(1234567890, "0123qwertyuiop") # >> iypeiwuu
+> ```
+
+### average_to_number(texts: list, alp: str) -> int  
+> Takes as input:
+> 1. texts (list) - the list of messages you want to encode. The texts are separated by `;` in the command
+> 2. alp (string) - the alphabet used for encoding  
+
+> Returns:
+>1. result (int) - each text is translated into a number, then their arithmetic mean is returned
+
+> Usage example
+> ```py
+> average_to_number(["hello", "world"], "helo wrd") # >> 11541
+> ```
+
+### average_to_text(texts: list, alp: str) -> str
+> Takes as input:
+> 1. texts (list) - the list of messages you want to encode. The texts are separated by `;` in the command
+> 2. alp (string) - the alphabet used for encoding  
+
+> Returns:
+>1. result (string) - each text is translated into a number, then their arithmetic mean is returned, translated back into text
+
+> Usage example
+> ```py
+> average_to_text(["hello", "world"], "helo wrd") # >> lr lw
 > ```
 
 ### class T2N

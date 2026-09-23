@@ -17,6 +17,14 @@ NTT
 - ntt [alphabet] [number] - converts a number to a text. Number MUST be an integer type (not float)
 - - example: ntt default 123456
 
+ATN
+- atn [alphabet] [text1;text2;...] - converts texts to numbers and returns their arithmetic mean. Separate multiple texts with ";"
+- - example: atn default Hello;World
+
+ATT
+- att [alphabet] [text1;text2;...] - converts texts to numbers, takes their arithmetic mean, and returns it translated back into text. Separate multiple texts with ";"
+- - example: att default Hello;World
+
 HELP
 - help - you are here.
 
