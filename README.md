@@ -10,14 +10,6 @@
 > 
 > this is t2n
 
-> atn default Hello;World!
-> 
-> *227142835184*
-
-> att tiny this;t2n
-> 
-> f4t7
-
 ## Important
 This algorithm is not a 100% way to protect your data. If someone has a single pair of source+result data, there is a way to decode other data as well. It's better to use the algorithm in combination with something else.
 
